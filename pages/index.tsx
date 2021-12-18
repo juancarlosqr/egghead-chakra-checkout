@@ -1,23 +1,14 @@
 import type { NextPage } from 'next'
-import { Container, Flex, VStack } from '@chakra-ui/react'
+import { Container, Flex } from '@chakra-ui/react'
+import Details from '@/components/Details'
+import Cart from '@/components/Cart'
 
 const HomePage: NextPage = () => {
   return (
     <Container maxW="container.xl" p={0}>
       <Flex h="100vh" py={20}>
-        <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
-          <h1>Hello Chakra-UI 👋🏼</h1>
-        </VStack>
-        <VStack
-          w="full"
-          h="full"
-          p={10}
-          spacing={10}
-          alignItems="flex-start"
-          bg="gray.50"
-        >
-          <h1>Hello Chakra-UI 👋🏼</h1>
-        </VStack>
+        <Details />
+        <Cart />
       </Flex>
     </Container>
   )
