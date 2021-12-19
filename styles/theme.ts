@@ -4,6 +4,7 @@ import {
   withDefaultColorScheme,
   withDefaultVariant,
 } from '@chakra-ui/react'
+import { mode } from '@chakra-ui/theme-tools'
 
 const inputSelectStyles = {
   sizes: {
@@ -21,6 +22,13 @@ const inputSelectStyles = {
         },
       },
     },
+  },
+}
+
+const brandRing = {
+  _focus: {
+    ring: 2,
+    ringColor: 'brand.500',
   },
 }
 
@@ -45,6 +53,24 @@ const theme = extendTheme(
       heading: `Montserrat, ${base.fonts?.heading}`,
     },
     components: {
+      Button: {
+        variants: {
+          primary: (props: any) => ({
+            backgroundColor: mode('brand.500', 'brand.200')(props),
+            color: mode('white', 'gray.800')(props),
+            ...brandRing,
+            rounded: 'none',
+
+            _hover: {
+              backgroundColor: mode('brand.600', 'brand.300')(props),
+            },
+
+            _active: {
+              backgroundColor: mode('brand.700', 'brand.400')(props),
+            },
+          }),
+        },
+      },
       Input: {
         ...inputSelectStyles,
       },
@@ -55,10 +81,7 @@ const theme = extendTheme(
         baseStyle: {
           control: {
             borderRadius: 'none',
-            _focus: {
-              ring: 2,
-              ringColor: 'brand.500',
-            },
+            ...brandRing,
           },
         },
       },
