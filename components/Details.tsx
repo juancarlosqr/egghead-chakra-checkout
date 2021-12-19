@@ -26,31 +26,31 @@ const Details = () => {
         <GridItem colSpan={colSpan}>
           <FormControl>
             <FormLabel>First Name</FormLabel>
-            <Input placeholder="Alice" />
+            <Input bg="gray.100" placeholder="Alice" />
           </FormControl>
         </GridItem>
         <GridItem colSpan={colSpan}>
           <FormControl>
             <FormLabel>Last Name</FormLabel>
-            <Input placeholder="Doe" />
+            <Input bg="gray.100" placeholder="Doe" />
           </FormControl>
         </GridItem>
         <GridItem colSpan={2}>
           <FormControl>
             <FormLabel>Address</FormLabel>
-            <Input placeholder="Acme Street 21" />
+            <Input bg="gray.100" placeholder="Acme Street 21" />
           </FormControl>
         </GridItem>
         <GridItem colSpan={colSpan}>
           <FormControl>
             <FormLabel>City</FormLabel>
-            <Input placeholder="San Francisco" />
+            <Input bg="gray.100" placeholder="San Francisco" />
           </FormControl>
         </GridItem>
         <GridItem colSpan={colSpan}>
           <FormControl>
             <FormLabel>Country</FormLabel>
-            <Select>
+            <Select bg="gray.100">
               <option value="de">Germany</option>
               <option value="uy">Uruguay</option>
               <option value="ve">Venezuela</option>
@@ -58,10 +58,12 @@ const Details = () => {
           </FormControl>
         </GridItem>
         <GridItem colSpan={2}>
-          <Checkbox defaultChecked>Ship to the billing address.</Checkbox>
+          <Checkbox colorScheme="brand" defaultChecked>
+            Ship to the billing address.
+          </Checkbox>
         </GridItem>
         <GridItem colSpan={2}>
-          <Button size="lg" w="full">
+          <Button colorScheme="brand" size="lg" w="full">
             Place Order
           </Button>
         </GridItem>
