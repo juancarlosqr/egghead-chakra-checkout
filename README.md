@@ -2,6 +2,8 @@
 
 Codebase from egghead.io course [Build a Modern User Interface with Chakra UI](https://egghead.io/courses/build-a-modern-user-interface-with-chakra-ui-fac68106)
 
+Course [repo](https://github.com/lazarnikolov94/egghead-getting-started-with-chakra-ui)
+
 Design specs are available on [Figma](https://www.figma.com/file/vOcnzw9yT05grSCD1ji7ax/egghead.io---Introduction-to-Chakra-UI?node-id=802%3A9205)
 
 **Screenshot**
